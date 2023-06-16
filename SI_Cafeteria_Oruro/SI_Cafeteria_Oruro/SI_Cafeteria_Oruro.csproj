@@ -56,11 +56,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contex\ModelCafeteria.cs" />
+    <Compile Include="Controller\ProductoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
-    <Compile Include="FrmModificarProductos.cs">
+    <Compile Include="Views\FrmModUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificarProductos.Designer.cs">
+    <Compile Include="Views\FrmModUsuario.Designer.cs">
+      <DependentUpon>FrmModUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmModificarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmModificarProductos.Designer.cs">
       <DependentUpon>FrmModificarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmMainMenu.cs">
@@ -81,8 +88,11 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Views\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmModificarProductos.resx">
+    <EmbeddedResource Include="Views\FrmModificarProductos.resx">
       <DependentUpon>FrmModificarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmModUsuario.resx">
+      <DependentUpon>FrmModUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -100,6 +110,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SI_Cafeteria_Oruro.Models.Cliente1.datasource" />
+    <None Include="Properties\DataSources\SI_Cafeteria_Oruro.Models.HistorialVenta1.datasource" />
+    <None Include="Properties\DataSources\SI_Cafeteria_Oruro.Models.Producto1.datasource" />
+    <None Include="Properties\DataSources\SI_Cafeteria_Oruro.Models.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

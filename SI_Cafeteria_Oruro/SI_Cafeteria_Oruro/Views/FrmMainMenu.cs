@@ -26,5 +26,21 @@ namespace SI_Cafeteria_Oruro
         {
 
         }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModificarProductos frmProductosMod = new FrmModificarProductos();
+            frmProductosMod.MdiParent = this;
+            frmProductosMod.WindowState = FormWindowState.Maximized;
+            frmProductosMod.Show();
+        }
+
+        private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModUsuario frmModUser= new FrmModUsuario();
+            frmModUser.MdiParent = this;
+            frmModUser.WindowState = FormWindowState.Maximized;
+            frmModUser.Show();
+        }
     }
 }

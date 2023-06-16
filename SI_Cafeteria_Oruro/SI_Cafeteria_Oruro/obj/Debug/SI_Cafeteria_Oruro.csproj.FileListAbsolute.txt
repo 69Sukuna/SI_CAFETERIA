@@ -16,3 +16,4 @@ E:\jose\semI-2023\SIS2420\Proyecto\SI_Cafeteria\SI_Cafeteria_Oruro\SI_Cafeteria_
 E:\jose\semI-2023\SIS2420\Proyecto\SI_Cafeteria\SI_Cafeteria_Oruro\SI_Cafeteria_Oruro\obj\Debug\SI_Cafeteria_Oruro.FrmModificarProductos.resources
 E:\jose\semI-2023\SIS2420\Proyecto\SI_Cafeteria\SI_Cafeteria_Oruro\SI_Cafeteria_Oruro\obj\Debug\SI_Cafeteria_Oruro.FrmLogin.resources
 E:\jose\semI-2023\SIS2420\Proyecto\SI_Cafeteria\SI_Cafeteria_Oruro\SI_Cafeteria_Oruro\obj\Debug\SI_Cafeteria_Oruro.FrmMainMenu.resources
+E:\jose\semI-2023\SIS2420\Proyecto\SI_Cafeteria\SI_Cafeteria_Oruro\SI_Cafeteria_Oruro\obj\Debug\SI_Cafeteria_Oruro.FrmModUsuario.resources

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,8 +36,6 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -80,14 +79,15 @@
             // 
             this.modificarToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // ventasToolStripMenuItem
@@ -111,26 +111,12 @@
             // modificarUsuarioToolStripMenuItem
             // 
             this.modificarUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.modificarUsuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarPersonalToolStripMenuItem,
-            this.modificarClienteToolStripMenuItem});
             this.modificarUsuarioToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.modificarUsuarioToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.modificarUsuarioToolStripMenuItem.Name = "modificarUsuarioToolStripMenuItem";
             this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.modificarUsuarioToolStripMenuItem.Text = "Modificar Usuario";
-            // 
-            // modificarPersonalToolStripMenuItem
-            // 
-            this.modificarPersonalToolStripMenuItem.Name = "modificarPersonalToolStripMenuItem";
-            this.modificarPersonalToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.modificarPersonalToolStripMenuItem.Text = "Modificar Personal";
-            // 
-            // modificarClienteToolStripMenuItem
-            // 
-            this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
+            this.modificarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuarioToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -153,6 +139,7 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(102, 17);
             this.toolStripStatusLabel1.Text = "Cateria Oruro v1.0";
@@ -161,10 +148,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(734, 377);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ForeColor = System.Drawing.Color.Black;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMainMenu";
@@ -192,7 +180,5 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarPersonalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarClienteToolStripMenuItem;
     }
 }

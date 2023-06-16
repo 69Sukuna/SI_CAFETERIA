@@ -40,6 +40,7 @@ namespace SI_Cafeteria_Oruro
             {
                 FrmMainMenu frmprin = new FrmMainMenu();
                 frmprin.Show(); 
+                
             }
             else
             {
