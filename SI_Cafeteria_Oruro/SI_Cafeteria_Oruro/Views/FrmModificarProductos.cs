@@ -23,6 +23,8 @@ namespace SI_Cafeteria_Oruro
         bool _isNew = true;
         private void BtnNuevoProd_Click(object sender, EventArgs e)
         {
+            nomProductTextBox.Visible = true;
+            nomProductLabel1.Visible = false;
             _isNew = true;
             groupBoxProducto.Enabled = true;
             productoBindingSource.AddNew();
@@ -30,6 +32,8 @@ namespace SI_Cafeteria_Oruro
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            nomProductTextBox.Visible = false;
+            nomProductLabel1.Visible = true;
             _isNew = false;
             groupBoxProducto.Enabled = true;
         }
@@ -48,6 +52,7 @@ namespace SI_Cafeteria_Oruro
                 _productoController.Delete(prod);
             }
             productoBindingSource.DataSource = _productoController.GetAll();
+            groupBoxProducto.Enabled = false;
         }
 
         private void FrmModificarProductos_Load(object sender, EventArgs e)
@@ -66,6 +71,7 @@ namespace SI_Cafeteria_Oruro
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
+            nomProductTextBox.Visible = false;
             Guardar();
         }
         public void Guardar()

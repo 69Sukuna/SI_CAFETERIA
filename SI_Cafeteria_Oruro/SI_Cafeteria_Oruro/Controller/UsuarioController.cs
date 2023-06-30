@@ -58,12 +58,19 @@ namespace SI_Cafeteria_Oruro.Controller
         //Crear, Actualizar, Eliminar
         public bool Create(Usuario usuario)
         {
+            String texto = usuario.NombreCompleto;
+            usuario.NombreCompleto = string.Join(" ", texto.Split(new[] { ' ' }
+            , StringSplitOptions.RemoveEmptyEntries));
+            usuario.NomUser = usuario.NomUser.Replace(" ", "");
             _context.Usuario.Add(usuario);
             return _context.SaveChanges() > 0;
         }
         
         public bool Update(Usuario usuario)
         {
+            String texto = usuario.NombreCompleto;
+            usuario.NombreCompleto = string.Join(" ", texto.Split(new[] { ' ' }
+            , StringSplitOptions.RemoveEmptyEntries));
             _context.Usuario.Attach(usuario);
             //Modificacion de registro
             _context.Entry(usuario).State = System.Data.Entity.EntityState.Modified;

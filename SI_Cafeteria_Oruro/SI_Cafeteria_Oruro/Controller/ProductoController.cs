@@ -40,6 +40,8 @@ namespace SI_Cafeteria_Oruro.Controller
         //Crear, Actualizar, Eliminar
         public bool Create(Producto producto)
         {
+            String texto = producto.NomProduct;
+            producto.NomProduct = string.Join(" ", texto.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
             _context.Producto.Add(producto);
             return _context.SaveChanges() > 0;
         }

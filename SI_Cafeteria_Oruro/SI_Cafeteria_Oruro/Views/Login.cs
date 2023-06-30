@@ -1,5 +1,6 @@
 ﻿using SI_Cafeteria_Oruro.Contex;
 using SI_Cafeteria_Oruro.Controller;
+using SI_Cafeteria_Oruro.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,8 @@ namespace SI_Cafeteria_Oruro
             bool isLogin = usuarioController.Login(usuario, password);
             if(isLogin)
             {
-                FrmMainMenu frmprin = new FrmMainMenu();
+                Usuario uslog = usuarioController.Get(usuario);
+                FrmMainMenu frmprin = new FrmMainMenu(uslog);
                 frmprin.Show(); 
                 
             }
@@ -51,5 +53,6 @@ namespace SI_Cafeteria_Oruro
             }
            
         }
+
     }
 }

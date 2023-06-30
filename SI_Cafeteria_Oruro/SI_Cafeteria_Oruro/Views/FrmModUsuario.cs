@@ -64,6 +64,8 @@ namespace SI_Cafeteria_Oruro
 
         private void BtnNuevoUser_Click(object sender, EventArgs e)
         {
+            nomUserLabel2.Visible = false;
+            nomUserTextBox.Visible = true;
             _isNew = true;
             groupBoxUsuario.Enabled = true;
             usuarioBindingSource.AddNew();
@@ -71,6 +73,8 @@ namespace SI_Cafeteria_Oruro
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            nomUserLabel2.Visible = true;
+            nomUserTextBox.Visible = false;
             _isNew = false;
             groupBoxUsuario.Enabled = true;
 
@@ -90,6 +94,7 @@ namespace SI_Cafeteria_Oruro
                 _usuarioController.Delete(user);
             }
             usuarioBindingSource.DataSource = _usuarioController.GetAll();
+            groupBoxUsuario.Enabled = false;
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
